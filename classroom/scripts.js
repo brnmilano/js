@@ -62,3 +62,73 @@ try {
 } finally {
   console.log("Finally");
 }
+
+const userName = "Bruno";
+
+function message(username) {
+  console.log(`Olá, ${username}`);
+}
+
+message(userName);
+
+function sum(a, b) {
+  console.log(a + b);
+}
+
+sum(10, 20);
+sum(5, 10);
+sum(2, 3);
+
+showMessage("Teste");
+
+function endLine() {
+  console.log("---");
+}
+
+function showMessage(message) {
+  console.log(message);
+
+  endLine();
+}
+
+/**
+ *
+ * @param {String} user email.
+ * @param {String} user password.
+ * @returns {Number} user id.
+ */
+function signIn(email, password) {
+  console.log(`Email: ${email}, Password: ${password}`);
+
+  return 7;
+}
+
+signIn("exemple@test.com", "123456");
+
+// Função anônima
+const hello1 = function () {
+  return "Hello";
+};
+
+console.log(hello1());
+
+// ----------------------------
+
+const hello2 = function (name) {
+  return `Hello, ${name}`;
+};
+
+console.log(hello2("Bruno"));
+
+// callback function
+function execute(taskName, callback) {
+  console.log(`Executando a tarefa ${taskName}`);
+
+  callback();
+}
+
+const callback = () => {
+  console.log("Tarefa executada com sucesso!");
+};
+
+execute("Tarefa 1", callback);
