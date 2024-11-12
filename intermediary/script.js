@@ -138,3 +138,46 @@ function newPerson(name) {
 
 const person1 = new newPerson("Bruno");
 console.log(person1);
+
+// Métodos de texto
+// Texto maiúsculo e minúsculo
+
+let message = "Estou estudando os fundamentos do JavaScript";
+console.log(message);
+
+// Exibir o texto em maiúsculo
+console.log(message.toUpperCase());
+
+// Exibir o texto em minúsculo
+console.log(message.toLowerCase());
+
+// Substituindo uma parte do texto
+console.log(message.replace("JavaScript", "HTML"));
+
+// Extraindo uma parte da string (start, end)
+console.log(message.slice(0, 5));
+
+// Extraindo uma parte da string de trás para frente
+console.log(message.slice(-11));
+
+let text = "      Texto exemplo.      ";
+console.log(text.length);
+console.log(text.trim().length);
+
+// Comletando uma String
+const creditCard = "1234567890123456"; // 16
+
+// Pega os 4 últmos digitos
+const lastDigits = creditCard.slice(-4);
+
+// Substitui os 12 primeiros numeros por X
+const maskedNumer = lastDigits.padStart(creditCard.length, "X");
+console.log(maskedNumer);
+
+// Substitui os ultimos por #
+const number = "123";
+console.log(number.padEnd(10, "#"));
+
+// Encontrando um conteúdo no texto
+// Em que posição uma palavra aparece
+console.log(message.indexOf("estudando"));
