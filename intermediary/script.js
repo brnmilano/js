@@ -181,3 +181,44 @@ console.log(number.padEnd(10, "#"));
 // Encontrando um conteúdo no texto
 // Em que posição uma palavra aparece
 console.log(message.indexOf("estudando"));
+
+// Criando Array com construtor
+// [] - Array
+// {} - Objeto
+const newArray = new Array();
+console.log(newArray); // - []
+
+// Criando Array com posições definidas e disponíveís
+const avaiable = new Array(10);
+
+// Criando e acessando um array
+const fruits = ["banana", "maça", "laranja"];
+console.log(fruits); // mostra o array
+console.log(fruits.length); // mostra o cumprimento do array
+console.log(fruits[1]); // mostra o elemento "maça"
+console.log(fruits[8]); // mostra undefined, essa posição não existe e/ou não está ocupada
+console.log(fruits[fruits.length]); // retorna undefined, a lista tem o tamanho dela - 1
+console.log(fruits[fruits.length - 1]); // mostra o elemento "laranja"
+
+// Convertendo string para array
+const userName = "Bruno Oliveira Milano";
+console.log(userName.split()); // Cria um novo array com uma string e os nomes separados por espaço
+console.log(Array.from(userName)); // Cria um novo array com cada letra da string original
+
+// Adicionando e removendo itens do array
+const users = [];
+
+// Adicionando ao final do array
+console.log(users.push("Bruno"));
+console.log(users.push("Marcelo"));
+console.log(users.push("Flávio"));
+console.log(users);
+
+// Adicionando ao inicio do array
+console.log(users.unshift("José"));
+
+// Remove o item do início do array
+console.log(users.shift());
+
+// Remove o item do final do array
+console.log(users.pop());
