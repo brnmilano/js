@@ -233,12 +233,94 @@ let position = newFruits.indexOf("Melancia ");
 
 let execute = true;
 
-while (execute) {
-  let response = window.prompt("Deseja continuar: 1 - SIM ou 2 - NÃO");
+// while (execute) {
+//   let response = window.prompt("Deseja continuar: 1 - SIM ou 2 - NÃO");
 
-  if (response === "2") {
-    execute = false;
-  }
-}
+//   if (response === "2") {
+//     execute = false;
+//   }
+// }
 
 console.log("Segue o fluxo");
+
+// Loop infinito
+// Estrutura de repetição que não tem fim
+
+// LOOP DO WHILE
+let doWhileValue = 0;
+
+do {
+  doWhileValue++;
+
+  console.log({ doWhileValue });
+} while (doWhileValue < 10);
+
+console.log("Segue o fluxo");
+
+// LOOP FOR
+// Iteração, voltas que o código dá
+for (step = 0; step < 10; step++) {
+  console.log(step);
+}
+
+let myNumber = 7;
+
+for (step = 0; step <= 10; step++) {
+  console.log(`${myNumber} x ${step} = ${myNumber * step}`);
+}
+
+// LOOP FOR IN
+
+let person = {
+  name: "Bruno",
+  surname: "Milano",
+  email: "este@test.com",
+};
+
+for (let property in person) {
+  // exibe o nome da propriedade
+  console.log(property);
+
+  // exibe o conteudo da propriedade
+  console.log(person[property]);
+}
+
+let students = ["Ana", "Flavio", "Bruno"];
+
+for (let index in students) {
+  // Exibe o indice do array
+  console.log(index);
+
+  // exibe cada item do array
+
+  console.log(students[index]);
+}
+
+// LOOP FOR OF
+// aqui percorremos e itera em cima dos valores, então precisa ser um objeto que pode ser percorrido
+// O array é um objeto iteravel, possui posições para serem percorridas
+
+for (let student of students) {
+  // Apresenta o conteudo do array students
+  console.log(student);
+}
+
+// Utilizando o BREAK para finalizar uma repetição
+
+for (let index = 0; index < 10; index++) {
+  if (index > 5) {
+    break;
+  }
+
+  console.log({ index });
+}
+
+// CONTINUE
+for (let continuar = 0; continuar < 10; continuar++) {
+  // pula o 5, executa o continue, então de 4 pula para 6
+  if (continuar === 5) {
+    continue;
+  }
+
+  console.log({ continuar });
+}
