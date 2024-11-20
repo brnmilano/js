@@ -29,3 +29,38 @@ let inDate = new Date();
 inDate.setFullYear(2030);
 
 console.log(inDate);
+
+// Convertendo uma data em uma string específica
+
+let date1 = new Date((2024, 6, 3, 14, 30, 0));
+
+console.log(date1.toString()); // converte para string
+console.log(date1.toDateString()); // converte apenas a data em uma string
+console.log(date1.toTimeString()); // converte apenas a hora em uma string
+
+// Usando o toLocaleString()
+console.log(
+  date1.toLocaleString("pt-BR", {
+    day: "2-digit",
+    month: "2-digit",
+    year: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+  })
+);
+
+// Conhecendo a Intl
+
+// Obtem informações da localidade
+const currentLocale = Intl.DateTimeFormat().resolvedOptions();
+console.log(currentLocale);
+
+// Exibe no formato de acordo com a localidade
+console.log(new Intl.DateTimeFormat("pt-BR").format(new Date()));
+console.log(new Intl.DateTimeFormat("en-US").format(new Date()));
+
+// Obtem a diferença em minutos do timezone
+console.log(date1.getTimezoneOffset());
+
+// Obtem a diferença em horas do timezone
+console.log(date1.getTimezoneOffset() / 60);
